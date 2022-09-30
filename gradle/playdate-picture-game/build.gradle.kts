@@ -10,7 +10,8 @@ group = "software.onepiece"
 version = "1.0"
 
 publishing {
-    repositories.maven("https://gradle.onepiece.software:1443/releases") {
+    // If you have a Maven repository to publish to, you may use that here
+    repositories.maven("https://example.com/repo/releases") {
         credentials {
             username = "jendrik"
             password = providers.environmentVariable("SUPER_SECRET").get()

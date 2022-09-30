@@ -41,7 +41,7 @@ val installPlaydateSdk = tasks.register<PlaydateSdkInstall>("installPlaydateSdk"
 }
 
 val processGameAssetPacks = tasks.register<GameAssetPacksProcessor>("processGameAssetPacks") {
-    assetPack.from(zipTree(kenneyGameAssets.elements.map { it.first() }).matching {
+    assetPack.from(zipTree(kenneyGameAssets.elements.map { it.single() }).matching {
         include("**/monochrome.png")
         include("**/monochrome_tilemap.png")
         include("**/tilemap_black.png")

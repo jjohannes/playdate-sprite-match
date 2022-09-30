@@ -5,7 +5,7 @@ local border = 24
 local size = 20
 local scale = 8
 
-local table = playdate.graphics.imagetable.new("images/sprites")
+local table = playdate.graphics.imagetable.new("images/pictures")
 
 local delta = border
 local onScreen = 1

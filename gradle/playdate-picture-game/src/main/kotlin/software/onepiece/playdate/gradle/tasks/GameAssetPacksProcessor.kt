@@ -64,6 +64,6 @@ abstract class GameAssetPacksProcessor : DefaultTask() {
         }
 
         ImageIO.write(imageWithoutSpacing, "png",
-            assetFolder.file("sprites-table-${spriteSize.get()}-${spriteSize.get()}.png").get().asFile)
+            assetFolder.file("pictures-table-${spriteSize.get()}-${spriteSize.get()}.png").get().asFile)
     }
 }

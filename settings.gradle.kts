@@ -1,12 +1,14 @@
 pluginManagement {
     includeBuild("gradle/playdate-picture-game")
-    repositories.maven("https://gradle.onepiece.software:1443/releases")
+    // Enable if you have a Maven repository you published the plugin (then you can remove 'gradle/playdate-picture-game' and the includeBuild above)
+    // See 'gradle/playdate-picture-game/build.gradle.kts' for publishing to the repository
+    // repositories.maven("https://example.com/repo/releases")
 }
 
 buildCache {
-    // local { directory = File(rootDir, "build-cache") }
     remote<HttpBuildCache> {
-        url = uri("https://gradle.onepiece.software:5071/cache/")
+        isEnabled = false // change if you have a remote cache to point to below
+        url = uri("https://example.com/gradle/cache/")
         isPush = true
         credentials {
             username = "jendrik"
